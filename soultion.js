@@ -25,16 +25,18 @@ class user{
         this.log.push(object2.id)
          }
 }
+class Challenges{
+    constructor(id,level){
+        this.id=id;
+        this.level=level;
+        }
+}
 var user1 = new user("JAD",0,[]);
 console.log(user1);
-user1.newSolvedChallenge({
-    id:1,
-    level : 'VE'
-});
-let object2 = {
-    id: 2,
-    level:'ME'
-};
-user1.newSolvedChallenge(object2);
+var ch = new Challenges (1,"VE")
+user1.newSolvedChallenge(ch)
+var ch1 = new Challenges (2,"ME")
+user1.newSolvedChallenge(ch1)
 console.log(user1.xp);
 console.log(user1.log);
+
